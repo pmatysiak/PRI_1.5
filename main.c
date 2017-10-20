@@ -17,11 +17,10 @@ double calka(double xp, double xk, int n, double a, double b, double potega)
 
     for(i;i<=n;i++)
     {
-        Sx+=(xp+(i*(xk-xp)/n));
+        Sx+=pow(((a*(xp+(i*(xk-xp)/n)))+b), potega);
     }
     Sx*=(a*((xk-xp)/n));
 	Sx+=b;
-	Sx=pow(Sx, potega);
     return Sx;
 }
 
