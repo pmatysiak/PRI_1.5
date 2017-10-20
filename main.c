@@ -13,11 +13,11 @@ double calka(double xp, double xk, int n, double a, double b, double potega)
 {
     double Sx;
     Sx=0.0;
-    int i=0;
+    int i=1;
 
-    for(i;i<n;i++)
+    for(i;i<=n;i++)
     {
-        Sx=Sx+pow((a*(xp+((xk-xp)/n))+b),potega);
+        Sx=Sx+pow((a*(xp+(i*(xk-xp)/n))+b),potega);
     }
     Sx=Sx*((xk-xp)/n);
     return Sx;
@@ -34,7 +34,7 @@ int main()
 	
 	//deklaracje zmiennych wewnetrznych programu
 		
-    int n=1000;
+    int n=10000;
     double moment,licznik,mianownik;
     moment=licznik=mianownik=0.0;
 
