@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 
 //program oblicza wartosc momentu bezwladnosci stozka powstalego poprzez
@@ -8,7 +9,7 @@
 
 //funkcja calka wykorzystuje metode numerycznego calkowania metoda prostokatow
 
-double calka(double xp, double xk, int n, double a, double b, int potega)
+double calka(double xp, double xk, int n, double a, double b, double potega)
 {
     double Sx;
     Sx=0.0;
@@ -16,9 +17,9 @@ double calka(double xp, double xk, int n, double a, double b, int potega)
 
     for(i;i<n;i++)
     {
-        Sx=Sx+1;
+        Sx=Sx+pow((a*(xp+((xk-xp)/n))+b),potega);
     }
-    Sx=Sx*1;
+    Sx=Sx*((xk-xp)/n);
     return Sx;
 }
 
@@ -66,7 +67,7 @@ int main()
 	
     licznik=calka(0, c, n, a, b, 4);
     mianownik=calka(0, c, n, a, b, 2);
-    moment=(licznik*m)/(mianownik*2);
+    moment=(licznik * m)/(mianownik * 2);
 	
 	
 	//wypisanie wyniku
