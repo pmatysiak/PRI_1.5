@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-double calka(double xp, double xk, int n)
+
+double calka(double xp, double xk, int n, double a, double b, int potega)
 {
     double Sx;
     Sx=0.0;
@@ -9,7 +10,7 @@ double calka(double xp, double xk, int n)
 
     for(i;i<n;i++)
     {
-        Sx=Sx+
+        Sx=Sx+1;
     }
     Sx=Sx*1;
     return Sx;
@@ -23,25 +24,30 @@ int main()
     double moment,licznik,mianownik;
     moment=licznik=mianownik=0.0;
 
-    printf("Podaj parametr a prostej y=ax+b:\n");
+    printf("Podaj parametr a prostej y=ax+b: ");
     scanf("%lf", &a);
-    printf("Podaj parametr b prostej y=ax+b:\n");
+    printf("Podaj parametr b prostej y=ax+b: ");
     scanf("%lf", &b);
-    printf("Podaj parametr c prostej y=c:\n");
+    printf("Podaj parametr c prostej y=c: ");
     scanf("%lf", &c);
-    printf("Podaj parametr m");
+    printf("Podaj mase stozka m: ");
     scanf("%lf", &m);
 
+	printf("Podane parametry to: a = ");
     printf("%lf",a);
-    printf("\n");
+    printf(", b = ");
     printf("%lf",b);
-    printf("\n");
+    printf(", c = ");
     printf("%lf",c);
-    printf("\n");
+    printf(", m = ");
+	printf("%lf",m);
 
-    licznik=calka(0.0, c, n);
-    mianownik=calka(0.0, c, n);
-    moment=
-    printf("%lf", wynik);
+    licznik=calka(0, c, n, a, b, 4);
+    mianownik=calka(0, c, n, a, b, 2);
+    moment=licznik*m/(mianownik*2);
+	
+	printf("\nMoment bezwladnosci stozka to: ");
+    printf("%E", moment);
+	scanf("%lf", &a);
     return 0;
 }
