@@ -6,6 +6,8 @@
 //obrot prostej y = ax + b ograniczonej prosta y = c wokol osi x.
 
 
+//funkcja calka wykorzystuje metode numerycznego calkowania metoda prostokatow
+
 double calka(double xp, double xk, int n, double a, double b, int potega)
 {
     double Sx;
@@ -60,12 +62,14 @@ int main()
 	printf("%lf",m);
 
 	
+	//wywolanie liczenia calek i momentu
 	
     licznik=calka(0, c, n, a, b, 4);
     mianownik=calka(0, c, n, a, b, 2);
-    moment=licznik*m/(mianownik*2);
+    moment=(licznik*m)/(mianownik*2);
 	
 	
+	//wypisanie wyniku
 	
 	printf("\nMoment bezwladnosci stozka to: ");
     printf("%E", moment);
