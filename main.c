@@ -77,6 +77,6 @@ int main()
     printf("%E", moment);
 	
 	
-	scanf("%lf", &a);
+	getchar();
     return 0;
 }
