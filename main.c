@@ -54,14 +54,7 @@ int main()
 	
 	//wypisywanie danych uzytkownika dla potwierdzenia
 	
-	printf("Podane parametry to: a = ");
-    printf("%lf",a);
-    printf(", b = ");
-    printf("%lf",b);
-    printf(", c = ");
-    printf("%lf",c);
-    printf(", m = ");
-	printf("%lf",m);
+	printf("Podane parametry to: a = %lf, b = %lf, c = %lf, m = %lf", a, b, c, m);
 
 	
 	//wywolanie liczenia calek i momentu
@@ -73,10 +66,12 @@ int main()
 	
 	//wypisanie wyniku
 	
-	printf("\nMoment bezwladnosci stozka to: ");
-    printf("%E", moment);
+	printf("\nMoment bezwladnosci stozka to: %E", moment);
 	
+	//zapobieganie wylaczaniu okienka
 	
 	getchar();
+	
+	
     return 0;
 }
