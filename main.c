@@ -12,9 +12,9 @@ double calka(double xp, double xk, int n, double a, double b, double potega)
 {
     double Sx;
     Sx=0.0;
-    int i=1;
+    int i;
 
-    for(i;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         Sx+=pow(((a*(xp+(i*(xk-xp)/n)))+b), potega);
     }
