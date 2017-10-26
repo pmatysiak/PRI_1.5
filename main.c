@@ -2,11 +2,14 @@
 #include <math.h>
 
 
-//program oblicza wartosc momentu bezwladnosci stozka powstalego poprzez
-//obrot prostej y = ax + b ograniczonej prosta y = c wokol osi x.
-
-
-//funkcja calka wykorzystuje metode numerycznego calkowania metoda prostokatow
+/// Funkcja calka wykorzystuje metode numerycznego calkowania metoda prostokatow.
+/// \param[in] xp dolna granica calkowania
+/// \param[in] xk gorna granica calkowania
+/// \param[in] n liczba prostokatow
+/// \param[in] a wspolczynnik kierunkowy prostej 
+/// \param[in] b wyraz wolny
+/// \param[in] potega
+/// \return wartosc calki wykorzystanej w liczniku - dla potegi = 4 lub mianowniku - dla potegi = 2 wzoru na moment bezwladnosci stozka.
 
 double calka(double xp, double xk, int n, double a, double b, double potega)
 {
@@ -22,6 +25,8 @@ double calka(double xp, double xk, int n, double a, double b, double potega)
 	Sx+=b;
     return Sx;
 }
+
+///Program oblicza wartosc momentu bezwladnosci stozka powstalego poprzez obrot prostej y = ax + b ograniczonej prosta y = c wokol osi x.
 
 int main()
 {
