@@ -40,8 +40,8 @@ int main()
 	//deklaracje zmiennych wewnetrznych programu
 		
     int n=1000;
-    double moment,licznik,mianownik;
-    moment=licznik=mianownik=0.0;
+    double moment;
+    moment=0.0;
 
 
 	//wczytywanie danych uzytkownika
@@ -63,10 +63,7 @@ int main()
 	
 	//wywolanie liczenia calek i momentu
 	
-    licznik=calka(0, c, n, a, b, 4);
-    mianownik=calka(0, c, n, a, b, 2);
-    moment=(licznik * m)/(mianownik * 2);
-	
+	moment=(calka(0, c, n, a, b, 4) * m)/(calka(0, c, n, a, b, 2) * 2);
 	
 	//wypisanie wyniku
 	
@@ -76,6 +73,5 @@ int main()
 	
 	getchar();
 	
-	
-    return 0;
+	return 0;
 }
