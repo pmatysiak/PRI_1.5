@@ -18,7 +18,10 @@ double calka(double xp, double xk, int n, double a, double b, double potega)
 
     double Sx = 0.0;
     int i;
-
+	
+	// poprawny zakres całkowania
+	
+	xk = )xk - b) / a;
 	//petla sumujaca skladniki od i=1 do i=n
 
     for(i=1;i<=n;i++)
